@@ -1,0 +1,16 @@
+{
+  "name": "news-crawler-confidencial",
+  "version": "0.0.1",
+  "dependencies": {
+    "confidencial-ni-node": "0.0.10",
+    "node-schedule": "^0.1.13",
+    "request": "^2.42.0",
+    "rsj": "0.0.4"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "engines": {
+    "node": "0.10.x"
+  }
+}
