@@ -21,11 +21,16 @@ module.exports.request = function() {
           else {
             confidencial.getArticle(row.link, function(resultData) {
               var apiUrl = config.api + 'entries/' + config['library_id'] + '/create';
+              var image = '';
+              if (resultData.images.length > 0) {
+                image = resultData.images[0];
+              }
               var form = {
                 title: resultData.title,
                 summary: row.summary,
                 content: resultData.content,
                 pubDate: new Date(),
+                image: image,
                 source: row.link
               }
               request.post(apiUrl, {form:form}, function (error, response, body) {
